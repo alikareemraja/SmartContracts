@@ -62,6 +62,7 @@ function createContract() {
         if (typeof contract.address !== 'undefined') {
              console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
 
+
              // now charge the contract with money:
              const chargeContract = {
                     "from": web3.eth.accounts[0],
@@ -71,6 +72,10 @@ function createContract() {
                     "chainId": 3
                 };
              web3.eth.sendTransaction(chargeContract, function (e) {console.log(e);})
+
+
+             $("#success").css("display","inline-block");
+             $("#scAddress").text(toString(contract.address));
         }
      })
 
