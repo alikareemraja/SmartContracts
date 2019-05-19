@@ -116,11 +116,11 @@ function letsGo(){
 
 
 		$("#r-distance").text($("#quantity").text());
-		$("#r-valueInEther").text(parseInt($("#amount").text(), 10) * 0.0044);
+		$("#r-valueInEther").text(Math.round( parseInt($("#amount").text(), 10) * 0.0044 * 10000) / 10000);
 		$("#r-valueInEur").text($("#amount").text());
 		$("#r-duration").text($("#deadlineDate").text());
 
-		$("#howItWorks").css("display","none"); //inline-block
+		$("#howItWorks").css("display","none"); 
 	} else if (step == 4) {
 
 		createContract();
