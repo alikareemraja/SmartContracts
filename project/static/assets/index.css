@@ -21,7 +21,7 @@ h1{
 	top:25%;
 }
 
-
+input { visibility: hidden; }
 
 /* Fix the Firefox bug */
 @-moz-document url-prefix() { 
