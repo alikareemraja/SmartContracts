@@ -99,7 +99,7 @@ function letsGo(){
         distance.setAttribute('name',"distance");
         text = parseInt($('#quantity').text(), 10);
         distance.setAttribute('value', text);
-        
+
 
         var duedate = document.createElement("input"); //input element, text
         duedate.setAttribute('type',"text");
@@ -131,7 +131,7 @@ function letsGo(){
 		$("#r-valueInEur").text($("#amount").text());
 		$("#r-duration").text($("#deadlineDate").text());
 
-		// $("#howItWorks").css("display","inline-block");
+		$("#howItWorks").css("display","inline-block"); //inline-block
 	} else if (step == 4) {
 
 		createContract();

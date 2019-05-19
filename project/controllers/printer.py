@@ -10,9 +10,9 @@ class CreateForm(FlaskForm):
     text = StringField('name', validators=[DataRequired()])
 
 
-@app.route('/')
-def start():
-    return render_template('printer/index.html')
+# @app.route('/')
+# def start():
+#     return render_template('printer/index.html')
 
 
 @app.route('/print', methods=['GET', 'POST'])
@@ -26,7 +26,7 @@ def printer():
     return render_template('printer/print.html', form=form)
 
 
-@app.route('/new', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def startpage():
     session['useremail'] = ''
     session['amount'] = 100
