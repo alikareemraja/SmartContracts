@@ -75,7 +75,7 @@ function createContract() {
 
 
              $("#success").css("display","inline-block");
-             $("#scAddress").text(toString(contract.address));
+             $("#scAddress").text(contract.address);
         }
      })
 
