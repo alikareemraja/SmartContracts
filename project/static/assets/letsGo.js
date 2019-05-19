@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 	setTimeout(slideLetsGoIn, 1500);
-	// setTimeout(slideEditNotice, 1500);
+	setTimeout(slideEditNotice, 1500);
 	userHasExploredScrolling = false;
 	step = 1;
 	$("#letsGo").click(letsGo);
@@ -9,42 +9,15 @@ $( document ).ready(function() {
 function redirect(){
     $("#letsGo").css("display","none").css('bottom','-70px');
 
-    setTimeout(slideLetsGoIn, 1000);
-	step += 1;
-	$(".steps").css("display","none")
-	$("#step-" + step.toString()).css("display","inline");
-
+    step += 1;
     $("#orpay").css("display","inline");
-
-    setTimeout(slideLetsGoIn, 1000);
-	step += 1;
+    step += 1;
 	$(".steps").css("display","none")
 	$("#step-" + step.toString()).css("display","inline");
 
-    $("#needToWrite").attr('style', 'padding-top:10px !important;');
-		$("#needToWrite").stop().animate({
-			top: "1.5%",
-			fontSize: "350%",
-			easing: "easein"
-		}, 500, function() {
-			$("#googleFit").css("display","inline-block");
-		});
 
-		$("#circle").stop().animate({
-			top: "-225px",
-			left: "-227px",
-			easing: "easein"
-		}, 100, function() {});
-
-		$("#needToWrite").attr('style', 'padding-top:10px !important;');
-		$("#needToWrite").stop().animate({
-			top: "1.5%",
-			fontSize: "350%",
-			easing: "easein"
-		}, 500, function() {
-
-		});
-
+		$("#needToWrite").attr('style', 'padding-top:10px !important; font-size:350% !important; top:1.5%;');
+		
 		$("#circle").stop().animate({
 			top: "-225px",
 			left: "-227px",
@@ -80,7 +53,7 @@ function letsGo(){
 			top: "1.5%",
 			fontSize: "350%",
 			easing: "easein"
-		}, 500, function() {		
+		}, 400, function() {		
 			$("#googleFit").css("display","inline-block");
 		});
 
@@ -151,6 +124,7 @@ function letsGo(){
 	} else if (step == 4) {
 
 		createContract();
+        $("#letsGo").css("visibility","hidden");
 	}
 
 

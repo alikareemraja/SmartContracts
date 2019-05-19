@@ -66,7 +66,7 @@ function createContract() {
              const chargeContract = {
                     "from": web3.eth.accounts[0],
                     "to": contract.address,
-                    "value": 100000000000000000 * parseInt($("#amount").text(), 10) * 0.0044;,
+                    "value": 1000000000000000000 * (parseInt($("#amount").text(), 10) * 0.0044),
                     "gas": '4700000',
                     "chainId": 3
                 };
