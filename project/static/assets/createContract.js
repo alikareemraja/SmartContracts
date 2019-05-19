@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
     }
 
     // 2. Request access to MetaMask accounts
-    // ethereum.enable();
+    ethereum.enable();
 })
 
 
