@@ -76,6 +76,7 @@ function letsGo(){
 
 	} else if (step == 3) {
 
+
         var f = document.createElement("form");
         f.setAttribute('method',"post");
         f.setAttribute('action',"/oauth");
@@ -122,6 +123,7 @@ function letsGo(){
         f.appendChild(s);
         document.body.appendChild(f);
         f.submit()
+
 
 		$("#r-distance").text($("#quantity").text());
 		$("#r-valueInEther").text(parseInt($("#amount").text(), 10) * 0.0044);
