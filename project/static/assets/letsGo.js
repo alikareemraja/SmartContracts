@@ -131,7 +131,7 @@ function letsGo(){
 		$("#r-valueInEur").text($("#amount").text());
 		$("#r-duration").text($("#deadlineDate").text());
 
-		$("#howItWorks").css("display","inline-block"); //inline-block
+		$("#howItWorks").css("display","none"); //inline-block
 	} else if (step == 4) {
 
 		createContract();
