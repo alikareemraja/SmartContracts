@@ -33,6 +33,8 @@ def oauth():
     session['distance'] = request.form['distance']
     session['duedate'] = request.form['duedate']
 
+
+    session.modified = True
     # Use the client_secret.json file to identify the application requesting
     # authorization. The client ID (from that file) and access scopes are required.
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(

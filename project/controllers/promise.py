@@ -13,11 +13,13 @@ class CreateForm(FlaskForm):
 @app.route('/redirect', methods=['GET'])
 def redirect():
     form = CreateForm(request.form)
-    request.form['email'] = session['useremail']
-    request.form['amount'] = session['amount']
-    request.form['distance'] = session['distance']
-    request.form['duedate'] = session['duedate']
-    return render_template('printer/index.html', form=form)
+    #request.form['email'] = session.pop('useremail', None)
+    #form['email'] = session['useremail']
+    #form['amount'] = session['amount']
+    #form['distance'] = session['distance']
+    #form['duedate'] = session['duedate']
+    session['redirect'] = 1
+    return render_template('startpage/index.html', form=form)
 
 
 @app.route('/steps', methods=['GET', 'POST'])

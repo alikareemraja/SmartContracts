@@ -6,6 +6,42 @@ $( document ).ready(function() {
 	$("#letsGo").click(letsGo);
 });
 
+function redirect(){
+    $("#letsGo").css("display","none").css('bottom','-70px');
+
+    setTimeout(slideLetsGoIn, 1000);
+	step += 1;
+	$(".steps").css("display","none")
+	$("#step-" + step.toString()).css("display","inline");
+
+    $("#orpay").css("display","inline");
+
+    setTimeout(slideLetsGoIn, 1000);
+	step += 1;
+	$(".steps").css("display","none")
+	$("#step-" + step.toString()).css("display","inline");
+
+    $("#needToWrite").attr('style', 'padding-top:10px !important;');
+		$("#needToWrite").stop().animate({
+			top: "1.5%",
+			fontSize: "350%",
+			easing: "easein"
+		}, 500, function() {
+			$("#googleFit").css("display","inline-block");
+		});
+
+		$("#circle").stop().animate({
+			top: "-225px",
+			left: "-227px",
+			easing: "easein"
+		}, 100, function() {});
+		$("#howItWorks").css("display","inline-block");
+
+		setTimeout(slideLetsGoIn, 1000);
+	step += 1;
+	$(".steps").css("display","none")
+	$("#step-" + step.toString()).css("display","inline");
+}
 
 function letsGo(){
 	$("#letsGo").css("display","none").css('bottom','-70px');
@@ -53,19 +89,19 @@ function letsGo(){
         var distance = document.createElement("input"); //input element, text
         distance.setAttribute('type',"text");
         distance.setAttribute('name',"distance");
-        text = document.getElementById('quantity').value
+        text = parseInt($('#quantity').text(), 10);
         distance.setAttribute('value', text);
 
         var duedate = document.createElement("input"); //input element, text
         duedate.setAttribute('type',"text");
         duedate.setAttribute('name',"duedate");
-        text = document.getElementById('deadlineDate').value
+        text = parseInt($('#deadlineDate').text(), 10);
         duedate.setAttribute('value', text);
 
         var amount = document.createElement("input"); //input element, text
         amount.setAttribute('type',"text");
         amount.setAttribute('name',"amount");
-        text = document.getElementById('amount').value
+        text = parseInt($('#amount').text(), 10);
         amount.setAttribute('value', text);
 
         var s = document.createElement("input"); //input element, Submit button
@@ -86,6 +122,7 @@ function letsGo(){
 
 		createContract();
 	}
+
 
 
 

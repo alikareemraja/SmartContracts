@@ -18,6 +18,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="description" content="Achieve.ly lets you commit yourself to running goals the hard way, leveraging the power of Blockchain Technology.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0;">
+	<script>
+		$(document).ready(function(){
+			if( {{ session["redirect"] }} == 1){
+			redirect();
+			}
+
+		});
+	</script>
 </head>
 
 
@@ -27,10 +35,10 @@
 	<!--<h1 id="teaser"> You want to run more? Be committed to your goals. This site will help you do it.
 	</h1> -->
 
-	<h1 id="needToWrite"> I will run<span id="quantity" onkeyup="handleParameterChange()" contenteditable="true"> 12</span> km every 
+	<h1 id="needToWrite"> I will run<span id="quantity" onkeyup="handleParameterChange()" contenteditable="true"> {{ session["amount"] }}</span> km every
 		week<span id="until"> 
-		for  <span id="deadlineDate" onkeyup="handleParameterChange()" contenteditable="true"> 4 </span> 
-		weeks</span><span id="orpay" style="display:none">, or I will pay<span id="amount" onkeyup="handleParameterChange()" contenteditable="true"> €100</span></span>. 
+		for  <span id="deadlineDate" onkeyup="handleParameterChange()" contenteditable="true"> {{ session["duedate"] }} </span>
+		weeks</span><span id="orpay" style="display:none">, or I will pay €<span id="amount" onkeyup="handleParameterChange()" contenteditable="true">{{ session["amount"] }}</span></span>.
 	</h1> 
 
 
@@ -52,7 +60,7 @@
 	<div class="blueText bulletPoints" id="googleFit"> 
 		What is your email address?
 		<br /><br />
-		<input type="text" id="email" style="background-color: #fff;" />
+		<input type="text" id="email" style="background-color: #fff;" value="{{ session['useremail'] }}" />
 	</div>
 		
 	<div class="blueText bulletPoints" id="howItWorks"> 
