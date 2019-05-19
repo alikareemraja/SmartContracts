@@ -38,7 +38,7 @@
 	<h1 id="needToWrite"> I will run<span id="quantity" onkeyup="handleParameterChange()" contenteditable="true"> {{ session["amount"] }}</span> km every
 		week<span id="until"> 
 		for  <span id="deadlineDate" onkeyup="handleParameterChange()" contenteditable="true"> {{ session["duedate"] }} </span>
-		weeks</span><span id="orpay" style="display:none">, or I will pay €<span id="amount" onkeyup="handleParameterChange()" contenteditable="true">{{ session["amount"] }}</span></span>.
+		weeks</span><span id="orpay" style="display:none">, or I will pay <span class="redText">€</span><span id="amount" onkeyup="handleParameterChange()" contenteditable="true">{{ session["amount"] }}</span></span>.
 	</h1> 
 
 
@@ -63,14 +63,10 @@
 		<input type="text" id="email" style="background-color: #fff;" value="{{ session['useremail'] }}" />
 	</div>
 		
+
 	<div class="blueText bulletPoints" id="howItWorks"> 
-		You will now create an <span>Etherium smart contract</span>, with an equivalent of €100 staked in it. As long as you run more than 12 km per week, the contract will return the money in 4 weeks. If you fail, the smart contract will destroy the money.
+		You will now create an <span>Etherium smart contract</span>, with <span class="redText" id="r-valueInEther">0.44</span> Ether &mdash; that's <span class="redText">€</span><span class="redText" id="r-valueInEur">100</span> &mdash; staked in it. As long as you run more than <span class="redText" id="r-distance">12</span> km per week, the contract will return the money in <span class="redText" id="r-duration">4</span> weeks. If you fail, the smart contract will destroy the money.
 	</div>
-
-
-	<div class="blueText bulletPoints" id="workWithResearch">  And if you have to do research and reading, you better bump that up to <span class="redText" id="researchTime">6 hours, and 40 minutes</span> which means you'll be done at <span class="redText" id="finishTimeWithResearch">4:55am</span>.</div>
-
-	<div class="blueText bulletPoints" id="paragraphsPerMinute"> You should be completing a paragraph every <span class="redText"> 11 minutes </span> and a page every <span id="minutesPerPage" class="redText"> 34 minutes</span>.</div>
 
 
 </body></html>

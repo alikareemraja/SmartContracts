@@ -35,6 +35,13 @@ function redirect(){
 			left: "-227px",
 			easing: "easein"
 		}, 100, function() {});
+
+		$("#r-distance").text($("#quantity").text());
+		$("#r-valueInEther").text(parseInt($("#amount").text(), 10) * 0.0044);
+		$("#r-valueInEur").text($("#amount").text());
+		$("#r-duration").text($("#deadlineDate").text());
+
+
 		$("#howItWorks").css("display","inline-block");
 
 		setTimeout(slideLetsGoIn, 1000);
@@ -116,6 +123,10 @@ function letsGo(){
         document.body.appendChild(f);
         f.submit()
 
+		$("#r-distance").text($("#quantity").text());
+		$("#r-valueInEther").text(parseInt($("#amount").text(), 10) * 0.0044);
+		$("#r-valueInEur").text($("#amount").text());
+		$("#r-duration").text($("#deadlineDate").text());
 
 		$("#howItWorks").css("display","inline-block");
 	} else if (step == 4) {
