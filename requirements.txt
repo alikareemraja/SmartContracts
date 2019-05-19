@@ -2,3 +2,8 @@ Flask
 Flask-WTF
 Jinja2
 Flask-DebugToolbar
+google
+gunicorn
+google-api-python-client
+google-auth-oauthlib
+google-cloud
