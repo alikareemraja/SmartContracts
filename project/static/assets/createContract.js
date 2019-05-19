@@ -56,7 +56,7 @@ function createContract() {
        {
          from: web3.eth.accounts[0], 
          data: '0x608060405273db45d0814a72d611daccc64ac9d9d1df1ad34045600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555034801561006557600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610119806100b56000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063385a9c37146044575b600080fd5b348015604f57600080fd5b5060566058565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151560b357600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16fffea165627a7a72305820f518d79481cc675a48dbe84f8ac4cf3271cc3faf3fad0d7b636ccf91573064200029',
-         gas: '47000000'
+         gas: '4700000'
        }, function (e, contract){
         console.log(e, contract);
         if (typeof contract.address !== 'undefined') {
@@ -66,8 +66,8 @@ function createContract() {
              const chargeContract = {
                     "from": web3.eth.accounts[0],
                     "to": contract.address,
-                    "value": "23000000000000000",
-                    "gas": '47000000',
+                    "value": 100000000000000000 * parseInt($("#amount").text(), 10) * 0.0044;,
+                    "gas": '4700000',
                     "chainId": 3
                 };
              web3.eth.sendTransaction(chargeContract, function (e) {console.log(e);})
