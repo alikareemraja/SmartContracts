@@ -6,10 +6,10 @@ body{
 
 
 #needToWrite{
-	color: #00000;
+	color: #00000 !important;
 	font-family: Helvetica Neue, Helvetica, Liberation Sans, sans-serif !important;
 	text-rendering: optimizeLegibility;
-	font-size: 500%;
+	font-size: 500% !important;
 	position:relative;
 	text-align: center;
 	margin:40px;
