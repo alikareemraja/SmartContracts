@@ -4,7 +4,7 @@
 	<!-- Custom CSS --> 
 	<link rel="stylesheet" href="{{ url_for('static', filename='assets/index.css') }}" type="text/css">
 	<link rel="stylesheet" media="screen and (max-width: 1400px)" href="{{ url_for('static', filename='assets/index1400.css') }}" type="text/css">
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- jQuery -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Custom JS --> 
@@ -22,6 +22,8 @@
 		$(document).ready(function(){
 			if( {{ session["redirect"] }} == 1){
 			redirect();
+
+
 			}
 
 		});
@@ -30,7 +32,7 @@
 
 
 <body>
-	<span id="circle" style="display: inline; top: -125px; left: -127px;"> <span id="editTheRed"> edit the red </span> </span>
+
 
 	<!--<h1 id="teaser"> You want to run more? Be committed to your goals. This site will help you do it.
 	</h1> -->
@@ -38,7 +40,7 @@
 	<h1 id="needToWrite"> I will run<span id="quantity" onkeyup="handleParameterChange()" contenteditable="true"> {{ session["amount"] }}</span> km every
 		week<span id="until"> 
 		for  <span id="deadlineDate" onkeyup="handleParameterChange()" contenteditable="true"> {{ session["duedate"] }} </span>
-		weeks</span><span id="orpay" style="display:none">, or I will pay <span class="redText">€</span><span id="amount" onkeyup="handleParameterChange()" contenteditable="true">{{ session["amount"] }}</span></span>.
+		weeks</span><span id="orpay" style="display:none">, or I will pay <span style="color: #01939a">€</span><span id="amount" onkeyup="handleParameterChange()" contenteditable="true">{{ session["amount"] }}</span></span>.
 	</h1> 
 
 
@@ -55,18 +57,21 @@
 		<span class="steps" id="step-4">Create a smart contract!</span>
 		
 	</div>
-
-
-	<div class="blueText bulletPoints" id="googleFit"> 
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="blueText bulletPoints" id="googleFit">
 		Your running is automatically tracked with Google Fit. What is your email address?
 		<br /><br />
 		<input type="text" id="email" style="background-color: #fff; visibility: visible;" value="{{ session['useremail'] }}" />
 	</div>
-		
 
-	<div class="blueText bulletPoints" id="howItWorks"> 
-		You will now create an <span>Etherium smart contract</span>, with <span class="redText" id="r-valueInEther">0.44</span> Ether &mdash; that's <span class="redText">€</span><span class="redText" id="r-valueInEur">100</span> &mdash; staked in it. As long as you run more than <span class="redText" id="r-distance">12</span> km per week, the contract will return the money in <span class="redText" id="r-duration">4</span> weeks. If you fail, the smart contract will destroy the money.
+
+	<div class="blueText bulletPoints" id="howItWorks">
+		You will now create an <span>Etherium smart contract</span>, with <span style="color: #000000" id="r-valueInEther">0.44</span> Ether &mdash; that's <span style="color: #000000">€</span><span style="color: #000000" id="r-valueInEur">100</span> &mdash; staked in it. As long as you run more than <span style="color: #000000" id="r-distance">12</span> km per week, the contract will return the money in <span style="color: #000000" id="r-duration">4</span> weeks. If you fail, the smart contract will destroy the money.
 	</div>
+			</div>
+		</div>
+
 
 
 </body></html>

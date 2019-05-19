@@ -36,6 +36,21 @@ function redirect(){
 			easing: "easein"
 		}, 100, function() {});
 
+		$("#needToWrite").attr('style', 'padding-top:10px !important;');
+		$("#needToWrite").stop().animate({
+			top: "1.5%",
+			fontSize: "350%",
+			easing: "easein"
+		}, 500, function() {
+
+		});
+
+		$("#circle").stop().animate({
+			top: "-225px",
+			left: "-227px",
+			easing: "easein"
+		}, 100, function() {});
+
 		$("#r-distance").text($("#quantity").text());
 		$("#r-valueInEther").text(parseInt($("#amount").text(), 10) * 0.0044);
 		$("#r-valueInEur").text($("#amount").text());
@@ -48,6 +63,7 @@ function redirect(){
 	step += 1;
 	$(".steps").css("display","none")
 	$("#step-" + step.toString()).css("display","inline");
+	document.getElementById("googleFit").style.display="none";
 }
 
 function letsGo(){
