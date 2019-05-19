@@ -1,0 +1,147 @@
+body{
+	background: #140018;
+	text-align:center;
+}
+
+
+h1{
+	color: #01939a;
+	font-family: Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
+	text-rendering: optimizeLegibility;
+	font-size: 500%;
+	position:relative;
+	text-align: center;
+	margin:40px;
+	font-weight: bold;
+	cursor:default;
+}
+
+
+#needToWrite{
+	top:25%;
+}
+
+
+/* Fix the Firefox bug */
+@-moz-document url-prefix() { 
+	#needToWrite{
+		padding-top:200px !important;
+	}
+}
+
+[contenteditable="true"] { 
+	outline: none; 
+}
+
+
+
+#quantity{
+	color: #bf3330;
+	cursor:text;
+}
+
+#deadlineDate{
+	color: #bf3330;
+	cursor:text;
+}
+
+#amount{
+	color: #bf3330;
+	cursor:text;
+}
+
+.steps {
+	font-size:130%;
+	display:none;
+}
+#step-1{
+	display:inline-block;
+}
+#step-3, #step-4 {
+	font-size:100%;
+}
+
+#letsGo{
+	font-family: Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
+	font-size: 200%;
+	color: #01939a;
+	position:absolute;
+	font-weight: bold;
+	display:none;
+	bottom:-70px;
+	right:50%;
+	margin-right:-200px;
+	width:400px;
+	cursor:pointer;
+	text-align:center;
+}
+
+#circle {
+	background-color: #01939a;
+	border-radius: 50%;
+	width: 225px;
+	height: 225px;
+	position: absolute;
+	display:none;
+	left: -227px;
+	top: -225px;
+}
+
+#editTheRed{
+	font-family: Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
+	font-weight: bold;
+	position: absolute;
+	right: 0px;
+	font-size: 21px;
+	text-align: center;
+	color: #FAE7E7;
+	bottom: 31px;
+	width: 112px;
+	transform: rotate(-44deg);
+	-ms-transform: rotate(-44deg);
+	-webkit-transform: rotate(-44deg);
+}
+
+.blueText{
+	font-family: Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
+	font-size: 150%;
+	color: #01939a;
+	font-weight: bold;
+	text-align: center;
+}
+
+.redText{
+	font-family: Helvetica Neue, Helvetica, Liberation Sans, sans-serif;
+	color: #bf3330;
+	font-weight: bold;
+}
+
+.bulletPoints{
+	display:none;
+	/*float:left;*/
+	margin-top:4%;
+	width: 70%;
+	font-size: 183%;
+}
+
+#howItWorks{
+	padding-top:0%;
+}
+
+#sources{
+	margin-bottom: 7%;
+	font-size: 123%;
+}
+
+.link{
+	cursor:pointer;
+	text-decoration: none;
+}
+
+#scrollDownNotice{
+	font-size:90%;
+	display:none;
+	position:fixed;
+	left:20px;
+	bottom:20px;
+}

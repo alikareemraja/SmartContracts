@@ -24,3 +24,8 @@ def printer():
         printer.show_string(form.text.data)
         return render_template('printer/index.html')
     return render_template('printer/print.html', form=form)
+
+
+@app.route('/new', methods=['GET', 'POST'])
+def startpage():
+    return render_template('startpage/index.html')
