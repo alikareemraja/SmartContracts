@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from project import app
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, session
 from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
@@ -25,15 +25,19 @@ def form():
 
 
 
-@app.route('/oauth', methods=['GET'])
+@app.route('/oauth', methods=['POST'])
 def oauth():
 
+    session['useremail'] = request.form['email']
+    session['amount'] = request.form['amount']
+    session['distance'] = request.form['distance']
+    session['duedate'] = request.form['duedate']
 
     # Use the client_secret.json file to identify the application requesting
     # authorization. The client ID (from that file) and access scopes are required.
     flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
         'client_secret.json',
-        scopes=['https://www.googleapis.com/auth/fitness.activity.read'])
+        scopes=['https://www.googleapis.com/auth/fitness.activity.read', 'https://www.googleapis.com/auth/fitness.activity.write'])
 
     # Indicate where the API server will redirect the user after the user completes
     # the authorization flow. The redirect URI is required.

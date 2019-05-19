@@ -33,6 +33,54 @@ function letsGo(){
 
 	} else if (step == 3) {
 
+        var f = document.createElement("form");
+        f.setAttribute('method',"post");
+        f.setAttribute('action',"/oauth");
+
+        var email = document.createElement("input"); //input element, text
+        email.setAttribute('type',"text");
+        email.setAttribute('name',"email");
+        text = document.getElementById('email').value
+        email.setAttribute('value', text);
+
+        /*var goal = document.createElement("input"); //input element, text
+        goal.setAttribute('type',"text");
+        goal.setAttribute('name',"goal");
+        text = document.getElementById('email').value
+        email.setAttribute('value', text);*/
+
+
+        var distance = document.createElement("input"); //input element, text
+        distance.setAttribute('type',"text");
+        distance.setAttribute('name',"distance");
+        text = document.getElementById('quantity').value
+        distance.setAttribute('value', text);
+
+        var duedate = document.createElement("input"); //input element, text
+        duedate.setAttribute('type',"text");
+        duedate.setAttribute('name',"duedate");
+        text = document.getElementById('deadlineDate').value
+        duedate.setAttribute('value', text);
+
+        var amount = document.createElement("input"); //input element, text
+        amount.setAttribute('type',"text");
+        amount.setAttribute('name',"amount");
+        text = document.getElementById('amount').value
+        amount.setAttribute('value', text);
+
+        var s = document.createElement("input"); //input element, Submit button
+        s.setAttribute('type',"submit");
+        s.setAttribute('value',"Submit");
+
+        f.appendChild(email);
+        f.appendChild(distance);
+        f.appendChild(duedate);
+        f.appendChild(amount);
+        f.appendChild(s);
+        document.body.appendChild(f);
+        f.submit()
+
+
 		$("#howItWorks").css("display","inline-block");
 	} else if (step == 4) {
 
