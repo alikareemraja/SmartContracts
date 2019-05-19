@@ -125,6 +125,7 @@ function letsGo(){
 
 		createContract();
         $("#letsGo").css("visibility","hidden");
+        setTimeout(function (){$("#waiting").css("display","inline-block");}, 5000);
 	}
 
 

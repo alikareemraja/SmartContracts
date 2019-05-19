@@ -68,12 +68,13 @@ function createContract() {
                     "from": web3.eth.accounts[0],
                     "to": contract.address,
                     "value": 1000000000000000000 * (parseInt($("#amount").text(), 10) * 0.0044),
-                    "gas": '4700000',
+                    "gas": '40000',
                     "chainId": 3
                 };
              web3.eth.sendTransaction(chargeContract, function (e) {console.log(e);})
 
 
+             $("#waiting").css("display","none");
              $("#success").css("display","inline-block");
              $("#scAddress").text(contract.address);
         }
