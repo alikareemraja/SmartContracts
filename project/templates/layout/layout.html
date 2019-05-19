@@ -8,6 +8,7 @@
 <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
 <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -27,8 +28,8 @@
       </div>
       <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-justified">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li class="dropdown">
+          <li class="active"><a href="/">Home</a></li>
+          <!--<li class="dropdown">
             <div class="dropper"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
               <ul class="dropdown-menu">
 				  <li><a href="index_boxed.html">Home / Boxed</a></li>
@@ -42,11 +43,11 @@
                   <li><a href="faq.html">FAQ</a></li>
               </ul>
             </div>
-          </li>
-          <li><a href="left_sidebar.html">left sidebar</a></li>
-          <li><a href="right_sidebar.html">right sidebar</a></li>
+          </li>-->
+          <li><a href="{{ url_for('form') }}">Commit</a></li>
+          <!--<li><a href="right_sidebar.html">right sidebar</a></li>
           <li><a href="full_width.html">full page</a></li>
-          <li><a href="contact.html">contact us</a></li>
+          <li><a href="contact.html">contact us</a></li>-->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -104,6 +105,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script  src="{{ url_for('static', filename='js/index.js') }}"></script>
 <script type="text/javascript">
 
 $('.carousel').carousel({

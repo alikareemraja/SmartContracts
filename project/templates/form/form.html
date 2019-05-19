@@ -1,22 +1,42 @@
 {% extends "layout/layout.html" %}
-{% block form %}
-    <div class="container">
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+<style>
+    .col {
+	display: block;
+	float:left;
+	margin: 0 0 0 1.6%;
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+
+.row{
+  padding: 20px 0;
+}
+</style>
+    <div class="container" style="height:500px;  width: 100%; max-width: 700px; margin: 0 auto; position: relative; ">
     <div class="wrapper">
       <ul class="steps">
-        <li class="is-active">Step 1</li>
-        <li>Step 2</li>
-        <li>Step 3</li>
+        <li class="is-active">Details</li>
+        <li>Goal</li>
+        <li>Pledge</li>
       </ul>
       <form class="form-wrapper">
         <fieldset class="section is-active">
           <h3>Your Details</h3>
-          <input type="text" name="name" id="name" placeholder="Name">
           <input type="text" name="email" id="email" placeholder="Email">
+            <input type="text" name="goal" id="goal" placeholder="Goal">
           <div class="button">Next</div>
         </fieldset>
         <fieldset class="section">
-          <h3>Account Type</h3>
-          <div class="row cf">
+          <h3>Goal</h3>
+
+            <input type="text" name="distance" id="distance" placeholder="Distance">
+            <input type="date" name="duedate" id="duedate" placeholder="Due Date">
+          <!--<div class="row cf">
             <div class="four col">
               <input type="radio" name="r1" id="r1" checked>
               <label for="r1">
@@ -33,14 +53,15 @@
                 <h4>Project Manager</h4>
               </label>
             </div>
-          </div>
+          </div>-->
           <div class="button">Next</div>
         </fieldset>
         <fieldset class="section">
-          <h3>Choose a Password</h3>
-          <input type="password" name="password" id="password" placeholder="Password">
-          <input type="password" name="password2" id="password2" placeholder="Re-enter Password">
-          <input class="submit button" type="submit" value="Sign Up">
+          <h3>Who checks if you did it</h3>
+          <input type="text" name="supervisor" id="supervisor" placeholder="Supervisor's Email">
+
+          <a href="/oauth" target="_blank">Authorize </a>
+          <input class="submit button" type="submit" value="Pledge">
         </fieldset>
         <fieldset class="section">
           <h3>Account Created!</h3>
@@ -50,4 +71,6 @@
       </form>
     </div>
   </div>
+
+
 {% endblock %}
